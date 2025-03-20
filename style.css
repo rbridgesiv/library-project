@@ -1,0 +1,6 @@
+#book-container {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self:center;
+    border: 2px solid black;
+}
