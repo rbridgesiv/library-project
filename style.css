@@ -1,6 +1,109 @@
+/* Reset margin and padding for all elements */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a consistent font style */
+body {
+    font-family: Arial, sans-serif;  /* Replace with your desired font */
+    line-height: 1.5;
+}
+
+/* Remove default styling for lists */
+ul, ol {
+    list-style: none;
+}
+
+/* Anchor tags don't have underlines by default */
+a {
+    text-decoration: none;
+    color: inherit;  /* Inherit text color from parent */
+}
+
+/* For form elements */
+input, button, textarea, select {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* Consistent sizing for images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Normalize the document's box model */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;  /* Default font size */
+}
+
+/* Remove any spacing caused by default styles on tables */
+table {
+    border-collapse: collapse;
+}
+
+body {
+    background-color: rgb(226, 241, 222);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+h1 {
+    color: rgb(82, 133, 71);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0 0 0;
+}
+
+button {
+    background-color: rgb(48, 152, 60);
+    height: 5vh;
+    width: 20vw;
+    border-radius: 4px;
+    font-size: 2vw;
+    text-align: center;
+    color: aliceblue;
+}
+
+button:hover {
+    background-color: #3e8e41
+}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+
 #book-container {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-self:center;
-    border: 2px solid black;
+    margin: 5vh 5vh 5vh 5vh;
+    gap: 3vh
+}
+
+.book-card {
+    border-radius: 9px;
+    height: 15vh;
+    text-align: center;
+    padding: 2vh 0 0 0;
+    background-color: rgb(111, 165, 70);
+}
+
+h3, p {
+    color: aliceblue;
 }
