@@ -6,9 +6,9 @@ function Book(title, author, year) {
 }
 
 const myLibrary = [
-    new Book("The Hobbit", "J.R.R. Tolkein", 1937),
-    new Book("To Kill A Mockingbird", "Harper Lee", 1960),
-    new Book("1984", "George Orwell", 1949)
+    // new Book("The Hobbit", "J.R.R. Tolkein", 1937),
+    // new Book("To Kill A Mockingbird", "Harper Lee", 1960),
+    // new Book("1984", "George Orwell", 1949)
 ];
 
 function addBookToLibrary(title, author, year) {
@@ -32,4 +32,12 @@ function displayBook() {
     })
 }
 
-document.addEventListener("DOMContentLoaded", displayBook);
+const button = document.getElementById("button");
+
+button.addEventListener('click', () => {
+    console.log('button clicked!')
+}) 
+
+
+
+// document.addEventListener("DOMContentLoaded", displayBook);
