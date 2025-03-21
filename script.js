@@ -35,7 +35,8 @@ function displayBook() {
 const button = document.getElementById("button");
 
 button.addEventListener('click', () => {
-    console.log('button clicked!')
+    const formDisplay = document.getElementById("book-form");
+    formDisplay.style.display = "grid";
 }) 
 
 
