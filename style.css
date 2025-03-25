@@ -92,7 +92,7 @@ h1 {
 .form-container {
     display: flex;
     justify-content: center;
-    margin: 10vh 0 0 0;
+    margin: 5vh 0 0 0;
 }
 
 #book-form {
@@ -100,23 +100,37 @@ h1 {
 }
 
 form {
-    background-color: #69a96b;
-    height: 20vh;
-    width: 40vw;
+    /* background-color: #69a96b; */
+    /* height: 20vh;*/
+    width: 300px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    padding: 2vh 4vw 1vh 4vw;
+    padding: 2vh 2vw 1vh 2vw;
+    gap: 4vw;
 }
 
 label {
     grid-column: 1 / 2;
-
 }
 
 input {
-    grid-column: 2 / 3;
+    grid-column: 2 / 4;
+    height: 3vh;
+    border-radius: 4px;
     background-color: aliceblue;
+}
+
+#submit-button {
+    background-color: rgb(214, 233, 210);
+    grid-column: 2 / 4;
+    color: rgb(82, 133, 71);
+    border-radius: 9px;
+}
+
+#submit-button:active {
+    box-shadow: 0 2px rgb(82, 133, 71);
+    transform: translateY(2px);
 }
 
 #book-container {
