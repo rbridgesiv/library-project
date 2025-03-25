@@ -2,8 +2,13 @@ function Book(title, author, year) {
     this.title = title;
     this.author = author;
     this.year = year;
+    this.read = read;
     this.id = crypto.randomUUID();
 }
+
+Book.prototype.toggleRead = function() {
+    this.read = !this.read; // Flip true <-> false
+};
 
 const myLibrary = [];
 
@@ -25,6 +30,19 @@ function displayBook() {
             <p>Year: ${book.year}</p>
         `;
 
+        const readToggle = document.createElement("button");
+        readToggle.classList.add("read-toggle");
+        readToggle.textContent = "not read";
+
+        readToggle.addEventListener("click", () => {
+            if (readToggle.textContent === "not read"){
+                readToggle.textContent = "read";
+            }
+            else {
+                readToggle.textContent = "not read";
+            }
+        })
+        
         const removeButton = document.createElement("button");
         removeButton.textContent = "X";
         removeButton.classList.add("remove-button");
@@ -34,8 +52,13 @@ function displayBook() {
             removeBookByID(book.id);
         })
 
+        const containerDiv = document.createElement("div");
+        containerDiv.classList.add("add-remove-btn-container");
+
+        containerDiv.appendChild(readToggle);
+        containerDiv.appendChild(removeButton);
+        bookCard.appendChild(containerDiv);
         bookContainer.appendChild(bookCard);
-        bookCard.appendChild(removeButton);
     })
 }
 
@@ -67,8 +90,6 @@ bookForm.addEventListener("submit", (event) => {
 window.onload = function() {
     document.getElementById("book-form").reset();
 };
-
-
 
 function removeBookByID(id) {
     const bookIndex = myLibrary.findIndex(book => book.id === id);
