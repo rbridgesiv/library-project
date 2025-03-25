@@ -50,7 +50,7 @@ table {
 }
 
 body {
-    background-color: rgb(226, 241, 222);
+    background-color: rgb(250, 241, 230);
 }
 
 .header {
@@ -60,7 +60,7 @@ body {
 }
 
 h1 {
-    color: rgb(82, 133, 71);
+    color: rgb(153, 188, 133);
 }
 
 .button-container {
@@ -70,21 +70,21 @@ h1 {
 }
 
 #button {
-    background-color: rgb(48, 152, 60);
+    background-color: rgb(228, 239, 231);
     height: 5vh;
     width: 20vw;
     border-radius: 4px;
     font-size: clamp(1vw, 1em, 1.5vw);
     text-align: center;
-    color: aliceblue;
+    color: rgb(153, 188, 133);
 }
 
 #button:hover {
-    background-color: #3e8e41
+    background-color: rgb(172, 211, 168);
 }
 
 #button:active {
-  background-color: #3e8e41;
+  background-color: rgb(172, 211, 168);
   box-shadow: 0 2px #666;
   transform: translateY(2px);
 }
@@ -112,24 +112,25 @@ form {
 
 label {
     grid-column: 1 / 2;
+    color: rgb(153, 188, 133)
 }
 
 input {
     grid-column: 2 / 4;
     height: 3vh;
     border-radius: 4px;
-    background-color: aliceblue;
+    background-color: rgb(253, 250, 246);
 }
 
 #submit-button {
-    background-color: rgb(214, 233, 210);
+    background-color: rgb(228, 239, 231);
     grid-column: 2 / 4;
-    color: rgb(82, 133, 71);
+    color: rgb(153, 188, 133);
     border-radius: 9px;
 }
 
 #submit-button:active {
-    box-shadow: 0 2px rgb(82, 133, 71);
+    box-shadow: 0 2px rgb(172, 211, 168);
     transform: translateY(2px);
 }
 
@@ -142,12 +143,13 @@ input {
 
 .book-card {
     border-radius: 9px;
-    height: 15vh;
+    height: 8em;
+    width: 15em;
     text-align: center;
     padding: 2vh 0 0 0;
-    background-color: rgb(111, 165, 70);
+    background-color: rgb(228, 239, 231);
 }
 
 h3, p {
-    color: aliceblue;
+    color: rgb(153, 188, 133);
 }
