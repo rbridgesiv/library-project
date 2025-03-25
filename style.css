@@ -120,6 +120,7 @@ input {
     height: 3vh;
     border-radius: 4px;
     background-color: rgb(253, 250, 246);
+    color: rgb(153, 188, 133);
 }
 
 #submit-button {
@@ -143,7 +144,7 @@ input {
 
 .book-card {
     border-radius: 9px;
-    height: 8em;
+    height: 9em;
     width: 15em;
     text-align: center;
     padding: 2vh 0 0 0;
@@ -152,4 +153,11 @@ input {
 
 h3, p {
     color: rgb(153, 188, 133);
+}
+
+.remove-button {
+    background-color: rgb(153, 188, 133);
+    color: rgb(228, 239, 231);
+    margin: 1.7em 0 0 0;
+    padding: 0 .2em 0 .2em;
 }
