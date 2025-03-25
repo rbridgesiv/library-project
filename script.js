@@ -24,7 +24,18 @@ function displayBook() {
             <p>Author: ${book.author}</p>
             <p>Year: ${book.year}</p>
         `;
+
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "X";
+        removeButton.classList.add("remove-button");
+        removeButton.setAttribute("data-id", book.id);
+
+        removeButton.addEventListener("click", () => {
+            removeBookByID(book.id);
+        })
+
         bookContainer.appendChild(bookCard);
+        bookCard.appendChild(removeButton);
     })
 }
 
@@ -52,5 +63,20 @@ bookForm.addEventListener("submit", (event) => {
     bookForm.reset();
     bookForm.style.display = "none";
 });
+
+window.onload = function() {
+    document.getElementById("book-form").reset();
+};
+
+const remove = document.getElementById("remove-button");
+
+function removeBookByID(id) {
+    const bookIndex = myLibrary.findIndex(book => book.id === id);
+    if (bookIndex !== -1) {
+        myLibrary.splice(bookIndex, 1);
+        displayBook();
+    }
+}
+
 
 // document.addEventListener("DOMContentLoaded", displayBook);
