@@ -68,7 +68,7 @@ window.onload = function() {
     document.getElementById("book-form").reset();
 };
 
-const remove = document.getElementById("remove-button");
+
 
 function removeBookByID(id) {
     const bookIndex = myLibrary.findIndex(book => book.id === id);
