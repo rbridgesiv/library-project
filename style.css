@@ -85,7 +85,7 @@ h1 {
 
 #button:active {
   background-color: rgb(172, 211, 168);
-  box-shadow: 0 2px #666;
+  box-shadow: 0 2px rgb(172, 211, 168);
   transform: translateY(2px);
 }
 
@@ -160,4 +160,9 @@ h3, p {
     color: rgb(228, 239, 231);
     margin: 1.7em 0 0 0;
     padding: 0 .2em 0 .2em;
+}
+
+.remove-button:active {
+    box-shadow: 0 2px rgb(172, 211, 168);
+    transform: translateY(2px);
 }
